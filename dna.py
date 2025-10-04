@@ -50,3 +50,16 @@ def Count_Point_Mutations(seq1, seq2):
             Hamming_distance+=1
         i+=1
     return Hamming_distance
+
+def motif(string, motif):
+    #Find the positions of a given motif in a sequence
+    positions = []
+    start = 0
+    while start < len(string):
+        if string[start : start + len(motif)] == motif:
+            positions.append(start+1)
+        start+=1
+    return positions
+        
+        
+
